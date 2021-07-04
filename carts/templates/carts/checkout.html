@@ -8,11 +8,12 @@
 <!-- ============================ COMPONENT 1 ================================= -->
 <div class="row">
 	<aside class="col-lg-6">
+<form action="{% url 'orders:place_order' %}" method="POST">
+	{% csrf_token %}
 <div class="card">
   <div class="card-body">
     <h4 class="cart_title_mb4">Billing Address</h4>
-    <form class="" method="POST">
-			{% csrf_token %}
+
       <div class="form-row">
         <div class="col form-group">
           <label for="">First Name</label>
